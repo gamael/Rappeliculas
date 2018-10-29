@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E25E00F44E83447E41D248 /* Pods_Rappeliculas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F83D20805A87B7A166EF42D /* Pods_Rappeliculas.framework */; };
 		D95C7DFE2185573200DA1391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFD2185573200DA1391 /* AppDelegate.swift */; };
 		D95C7E002185573200DA1391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFF2185573200DA1391 /* ViewController.swift */; };
 		D95C7E032185573200DA1391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E012185573200DA1391 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F83D20805A87B7A166EF42D /* Pods_Rappeliculas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rappeliculas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD96526BF82D352C60D92585 /* Pods-Rappeliculas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rappeliculas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rappeliculas/Pods-Rappeliculas.release.xcconfig"; sourceTree = "<group>"; };
+		BDCB7D5A1BA3D9D0A6C80BEC /* Pods-Rappeliculas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rappeliculas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rappeliculas/Pods-Rappeliculas.debug.xcconfig"; sourceTree = "<group>"; };
 		D95C7DFA2185573200DA1391 /* Rappeliculas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappeliculas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95C7DFD2185573200DA1391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95C7DFF2185573200DA1391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E25E00F44E83447E41D248 /* Pods_Rappeliculas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5FF6C02BCA43CA3E8F50761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F83D20805A87B7A166EF42D /* Pods_Rappeliculas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D95C7DF12185573200DA1391 = {
 			isa = PBXGroup;
 			children = (
 				D95C7DFC2185573200DA1391 /* Rappeliculas */,
 				D95C7DFB2185573200DA1391 /* Products */,
+				F6AF1B4C78F4E51B7FB812FF /* Pods */,
+				D5FF6C02BCA43CA3E8F50761 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Rappeliculas;
 			sourceTree = "<group>";
 		};
+		F6AF1B4C78F4E51B7FB812FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDCB7D5A1BA3D9D0A6C80BEC /* Pods-Rappeliculas.debug.xcconfig */,
+				AD96526BF82D352C60D92585 /* Pods-Rappeliculas.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D95C7E0C2185573400DA1391 /* Build configuration list for PBXNativeTarget "Rappeliculas" */;
 			buildPhases = (
+				C38C808940B27CDF237497DB /* [CP] Check Pods Manifest.lock */,
 				D95C7DF62185573200DA1391 /* Sources */,
 				D95C7DF72185573200DA1391 /* Frameworks */,
 				D95C7DF82185573200DA1391 /* Resources */,
+				868D81C7D8AC595907A8E564 /* [CP] Embed Pods Frameworks */,
+				40B44D4985854AD091AE4593 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40B44D4985854AD091AE4593 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rappeliculas/Pods-Rappeliculas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		868D81C7D8AC595907A8E564 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rappeliculas/Pods-Rappeliculas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rappeliculas/Pods-Rappeliculas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38C808940B27CDF237497DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rappeliculas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D95C7DF62185573200DA1391 /* Sources */ = {
@@ -278,6 +361,7 @@
 		};
 		D95C7E0D2185573400DA1391 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDCB7D5A1BA3D9D0A6C80BEC /* Pods-Rappeliculas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +379,7 @@
 		};
 		D95C7E0E2185573400DA1391 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD96526BF82D352C60D92585 /* Pods-Rappeliculas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
