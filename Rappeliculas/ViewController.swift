@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import RevealingSplashView
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
+        
+        //Initialize a revealing Splash with with the iconImage, the initial size and the background color
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "ICtmdb")!,iconInitialSize: CGSize(width: 147, height: 151), backgroundColor: UIColor(red:255, green:255, blue:255, alpha:1.0))
+        
+        //Adds the revealing splash view as a sub view
+        self.view.addSubview(revealingSplashView)
+        
+        //Starts animation
+        revealingSplashView.startAnimation(){
+            print("Completed")
+        }
     }
 
     override func didReceiveMemoryWarning() {

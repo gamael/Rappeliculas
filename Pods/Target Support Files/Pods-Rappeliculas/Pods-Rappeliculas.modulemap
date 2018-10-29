@@ -1,0 +1,6 @@
+framework module Pods_Rappeliculas {
+  umbrella header "Pods-Rappeliculas-umbrella.h"
+
+  export *
+  module * { export * }
+}
