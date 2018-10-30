@@ -16,6 +16,7 @@
 		D95C7E102186C0DF00DA1391 /* Configuración.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7E0F2186C0DF00DA1391 /* Configuración.swift */; };
 		D9FC7D3F21880E5A002750D1 /* Pelicula.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC7D3E21880E5A002750D1 /* Pelicula.swift */; };
 		D9FC7D4121881BEA002750D1 /* Servicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC7D4021881BEA002750D1 /* Servicios.swift */; };
+		D9FC7D45218822B8002750D1 /* PopularTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC7D44218822B8002750D1 /* PopularTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D95C7E0F2186C0DF00DA1391 /* Configuración.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuración.swift"; sourceTree = "<group>"; };
 		D9FC7D3E21880E5A002750D1 /* Pelicula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pelicula.swift; sourceTree = "<group>"; };
 		D9FC7D4021881BEA002750D1 /* Servicios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servicios.swift; sourceTree = "<group>"; };
+		D9FC7D44218822B8002750D1 /* PopularTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				D95C7E0F2186C0DF00DA1391 /* Configuración.swift */,
 				D9FC7D3E21880E5A002750D1 /* Pelicula.swift */,
 				D9FC7D4021881BEA002750D1 /* Servicios.swift */,
+				D9FC7D44218822B8002750D1 /* PopularTVC.swift */,
 			);
 			path = Rappeliculas;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				D9FC7D3F21880E5A002750D1 /* Pelicula.swift in Sources */,
 				D95C7E002185573200DA1391 /* ViewController.swift in Sources */,
 				D9FC7D4121881BEA002750D1 /* Servicios.swift in Sources */,
+				D9FC7D45218822B8002750D1 /* PopularTVC.swift in Sources */,
 				D95C7E102186C0DF00DA1391 /* Configuración.swift in Sources */,
 				D95C7DFE2185573200DA1391 /* AppDelegate.swift in Sources */,
 			);

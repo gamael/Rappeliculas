@@ -18,7 +18,7 @@ class Servicios {
             "page" : "1"
         ]
 //        let parameters: Parameters = ["foo": "bar"]
-        Alamofire.request("\(Registro.conexionIMDB.URLservicio)movie/top_rated", parameters: parametros, encoding: URLEncoding.httpBody).responseJSON { response in
+        Alamofire.request("\(Registro.conexionIMDB.URLservicio)movie/top_rated", parameters: parametros).responseJSON { response in
             debugPrint(response)
             
             if let json = response.result.value {
