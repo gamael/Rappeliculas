@@ -14,4 +14,10 @@ struct Registro {
         static let URLservicio = "https://api.themoviedb.org/4/"
         static let apiKey = "6f76b5b149d80e160c9cff7e4093856e"
     }
+    
+    struct configuración {
+        static let idiomaPorDefecto = "es-CO"
+    }
+    
+    
 }
