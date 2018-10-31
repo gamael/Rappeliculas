@@ -8,4 +8,5 @@ target 'Rappeliculas' do
   # Pods for Rappeliculas
   pod 'Alamofire', '~> 4.7'
   pod 'RevealingSplashView'
+  pod 'Cards'
 end
