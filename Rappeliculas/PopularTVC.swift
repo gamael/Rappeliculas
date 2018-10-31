@@ -11,6 +11,8 @@ import UIKit
 class PopularTVC: UITableViewController {
     
     var servicios = Servicios()
+    var peliculas = [PeliculaCD]()
+    var dataController: DataController!
     
 
     override func viewDidLoad() {

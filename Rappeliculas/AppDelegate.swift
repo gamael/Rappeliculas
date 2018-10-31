@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         dataController.load()
+        
+        let tabBarController = window?.rootViewController as! UITabBarController
+        let popularTableViewController = tabBarController.viewControllers?.first as! PopularTVC
+        popularTableViewController.dataController = dataController
         return true
     }
 
