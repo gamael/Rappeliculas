@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 open class LayoutHelper {
-
     let rect: CGRect
 
     public init(rect: CGRect) {
@@ -44,34 +43,26 @@ open class LayoutHelper {
     open func RevY(_ percentage: CGFloat, height: CGFloat, from: UIView) -> CGFloat {
         return from.frame.minY - Y(percentage) - height
     }
-    
-    static open func Width(_ percentage: CGFloat, of view: UIView) -> CGFloat {
+
+    open static func Width(_ percentage: CGFloat, of view: UIView) -> CGFloat {
         return view.frame.width * (percentage / 100)
     }
-    
-    static open func Height(_ percentage: CGFloat, of view: UIView) -> CGFloat {
+
+    open static func Height(_ percentage: CGFloat, of view: UIView) -> CGFloat {
         return view.frame.height * (percentage / 100)
     }
 
-    static open func XScreen(_ percentage: CGFloat) -> CGFloat {
-        
-        
-            return percentage * UIScreen.main.bounds.height / 100
-        
+    open static func XScreen(_ percentage: CGFloat) -> CGFloat {
+        return percentage * UIScreen.main.bounds.height / 100
     }
 
-    static open func YScreen(_ percentage: CGFloat) -> CGFloat {
-        
-        
-            return percentage * UIScreen.main.bounds.width / 100
-        
+    open static func YScreen(_ percentage: CGFloat) -> CGFloat {
+        return percentage * UIScreen.main.bounds.width / 100
     }
-
 }
 
 extension CGRect {
-    
     var center: CGPoint {
-        return CGPoint(x: width/2 + minX, y: height/2 + minY)
+        return CGPoint(x: width / 2 + minX, y: height / 2 + minY)
     }
 }
