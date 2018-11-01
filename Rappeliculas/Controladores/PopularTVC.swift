@@ -62,14 +62,20 @@ class PopularTVC: UITableViewController {
 
         return cell
     }
+    
+ 
 
-    /*
+    
      // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        if segue.identifier == "verDetalle" {
+            let vc = segue.destination as! DetallePeliculaVC
+            let indiceSeleccionado = tableView.indexPathForSelectedRow?.row
+            vc.titulo = peliculas[indiceSeleccionado!].title!
+            vc.fecha = peliculas[indiceSeleccionado!].release_date!
+            vc.resumen = peliculas[indiceSeleccionado!].overview!
+        }
+    
      }
-     */
+    
 }
