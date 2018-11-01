@@ -23,7 +23,6 @@ struct Pelicula: Codable {
     var vote_count: Int
     var video: Bool
     var vote_average: Float
-    
 }
 
 

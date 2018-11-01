@@ -26,8 +26,6 @@ class Servicios {
                     let json = try JSON(data: response.data!)
                     let peliculasResultado: [Pelicula] = try [Pelicula].decode(from: json["results"].rawData())
                     completion(peliculasResultado)
-                    
-//                    completion(info, nil)
                 }catch {
                     print("El servicio falló")
                 }
@@ -41,6 +39,17 @@ class Servicios {
     func savePupularMovies(_ peliculas: [Pelicula], dataController dc: DataController, completion: @escaping () -> () ) -> Void {
         for peli in peliculas {
             let peliculaCoreData = PeliculaCD(context: dc.viewContext)
+            peliculaCoreData.poster_path = peli.poster_path
+            peliculaCoreData.adult = peli.adult
+            peliculaCoreData.overview = peli.overview
+            peliculaCoreData.release_date = peli.release_date
+            peliculaCoreData.original_title = peli.original_title
+            peliculaCoreData.original_language = peli.original_language
+            peliculaCoreData.backdrop_path = peli.backdrop_path
+            peliculaCoreData.popularity = peli.popularity
+            peliculaCoreData.vote_count = peli.vote_count
+            peliculaCoreData.video = peli.video
+            peliculaCoreData.vote_average = peli.vote_average
             peliculaCoreData.id = peli.id
             peliculaCoreData.title = peli.title
         }
