@@ -12,6 +12,7 @@
 		D933F2802189697A0084B6CB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F27F2189697A0084B6CB /* DataController.swift */; };
 		D933F282218A5F200084B6CB /* Codable+SerializeDeserialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */; };
 		D933F284218AC7EB0084B6CB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F283218AC7EB0084B6CB /* TabBarController.swift */; };
+		D933F292218AD7020084B6CB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D933F291218AD7020084B6CB /* Default-568h@2x.png */; };
 		D95C7DFE2185573200DA1391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFD2185573200DA1391 /* AppDelegate.swift */; };
 		D95C7E032185573200DA1391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E012185573200DA1391 /* Main.storyboard */; };
 		D95C7E052185573400DA1391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E042185573400DA1391 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		D933F27F2189697A0084B6CB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SerializeDeserialize.swift"; sourceTree = "<group>"; };
 		D933F283218AC7EB0084B6CB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D933F291218AD7020084B6CB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D95C7DFA2185573200DA1391 /* Rappeliculas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappeliculas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95C7DFD2185573200DA1391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95C7E022185573200DA1391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,8 +128,8 @@
 		D933F28F218ACADD0084B6CB /* Configuración */ = {
 			isa = PBXGroup;
 			children = (
-				D95C7DFD2185573200DA1391 /* AppDelegate.swift */,
 				D95C7E092185573400DA1391 /* Info.plist */,
+				D95C7DFD2185573200DA1391 /* AppDelegate.swift */,
 				D95C7E0F2186C0DF00DA1391 /* Configuración.swift */,
 			);
 			name = "Configuración";
@@ -137,6 +139,7 @@
 		D95C7DF12185573200DA1391 = {
 			isa = PBXGroup;
 			children = (
+				D933F291218AD7020084B6CB /* Default-568h@2x.png */,
 				D95C7DFC2185573200DA1391 /* Rappeliculas */,
 				D95C7DFB2185573200DA1391 /* Products */,
 				F6AF1B4C78F4E51B7FB812FF /* Pods */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95C7E082185573400DA1391 /* LaunchScreen.storyboard in Resources */,
+				D933F292218AD7020084B6CB /* Default-568h@2x.png in Resources */,
 				D95C7E052185573400DA1391 /* Assets.xcassets in Resources */,
 				D95C7E032185573200DA1391 /* Main.storyboard in Resources */,
 			);
@@ -464,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Rappeliculas/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Rappeliculas/Configuración/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Rappeliculas/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Rappeliculas/Configuración/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

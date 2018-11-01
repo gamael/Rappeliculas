@@ -20,7 +20,7 @@ struct Pelicula: Codable {
     var title: String
     var backdrop_path: String?
     var popularity: Float
-    var vote_count: Int
+    var vote_count: Int32
     var video: Bool
     var vote_average: Float
 }
