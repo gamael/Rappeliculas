@@ -11,8 +11,8 @@
 		D933F27E218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D933F27C218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld */; };
 		D933F2802189697A0084B6CB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F27F2189697A0084B6CB /* DataController.swift */; };
 		D933F282218A5F200084B6CB /* Codable+SerializeDeserialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */; };
+		D933F284218AC7EB0084B6CB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F283218AC7EB0084B6CB /* TabBarController.swift */; };
 		D95C7DFE2185573200DA1391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFD2185573200DA1391 /* AppDelegate.swift */; };
-		D95C7E002185573200DA1391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFF2185573200DA1391 /* ViewController.swift */; };
 		D95C7E032185573200DA1391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E012185573200DA1391 /* Main.storyboard */; };
 		D95C7E052185573400DA1391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E042185573400DA1391 /* Assets.xcassets */; };
 		D95C7E082185573400DA1391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E062185573400DA1391 /* LaunchScreen.storyboard */; };
@@ -29,9 +29,9 @@
 		D933F27D218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModeloDatosRappeliculas.xcdatamodel; sourceTree = "<group>"; };
 		D933F27F2189697A0084B6CB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SerializeDeserialize.swift"; sourceTree = "<group>"; };
+		D933F283218AC7EB0084B6CB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D95C7DFA2185573200DA1391 /* Rappeliculas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappeliculas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95C7DFD2185573200DA1391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D95C7DFF2185573200DA1391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D95C7E022185573200DA1391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D95C7E042185573400DA1391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95C7E072185573400DA1391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				D95C7DFD2185573200DA1391 /* AppDelegate.swift */,
-				D95C7DFF2185573200DA1391 /* ViewController.swift */,
 				D95C7E012185573200DA1391 /* Main.storyboard */,
 				D95C7E042185573400DA1391 /* Assets.xcassets */,
 				D95C7E062185573400DA1391 /* LaunchScreen.storyboard */,
@@ -96,6 +95,7 @@
 				D9FC7D44218822B8002750D1 /* PopularTVC.swift */,
 				D933F27C218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld */,
 				D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */,
+				D933F283218AC7EB0084B6CB /* TabBarController.swift */,
 			);
 			path = Rappeliculas;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 			files = (
 				D9FC7D3F21880E5A002750D1 /* Pelicula.swift in Sources */,
 				D933F282218A5F200084B6CB /* Codable+SerializeDeserialize.swift in Sources */,
-				D95C7E002185573200DA1391 /* ViewController.swift in Sources */,
+				D933F284218AC7EB0084B6CB /* TabBarController.swift in Sources */,
 				D933F27E218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld in Sources */,
 				D9FC7D4121881BEA002750D1 /* Servicios.swift in Sources */,
 				D9FC7D45218822B8002750D1 /* PopularTVC.swift in Sources */,
