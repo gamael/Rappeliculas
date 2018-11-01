@@ -10,6 +10,7 @@
 		03E25E00F44E83447E41D248 /* Pods_Rappeliculas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F83D20805A87B7A166EF42D /* Pods_Rappeliculas.framework */; };
 		D933F27E218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D933F27C218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld */; };
 		D933F2802189697A0084B6CB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F27F2189697A0084B6CB /* DataController.swift */; };
+		D933F282218A5F200084B6CB /* Codable+SerializeDeserialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */; };
 		D95C7DFE2185573200DA1391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFD2185573200DA1391 /* AppDelegate.swift */; };
 		D95C7E002185573200DA1391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C7DFF2185573200DA1391 /* ViewController.swift */; };
 		D95C7E032185573200DA1391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95C7E012185573200DA1391 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		BDCB7D5A1BA3D9D0A6C80BEC /* Pods-Rappeliculas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rappeliculas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rappeliculas/Pods-Rappeliculas.debug.xcconfig"; sourceTree = "<group>"; };
 		D933F27D218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModeloDatosRappeliculas.xcdatamodel; sourceTree = "<group>"; };
 		D933F27F2189697A0084B6CB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SerializeDeserialize.swift"; sourceTree = "<group>"; };
 		D95C7DFA2185573200DA1391 /* Rappeliculas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rappeliculas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95C7DFD2185573200DA1391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95C7DFF2185573200DA1391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				D9FC7D4021881BEA002750D1 /* Servicios.swift */,
 				D9FC7D44218822B8002750D1 /* PopularTVC.swift */,
 				D933F27C218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld */,
+				D933F281218A5F200084B6CB /* Codable+SerializeDeserialize.swift */,
 			);
 			path = Rappeliculas;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FC7D3F21880E5A002750D1 /* Pelicula.swift in Sources */,
+				D933F282218A5F200084B6CB /* Codable+SerializeDeserialize.swift in Sources */,
 				D95C7E002185573200DA1391 /* ViewController.swift in Sources */,
 				D933F27E218954220084B6CB /* ModeloDatosRappeliculas.xcdatamodeld in Sources */,
 				D9FC7D4121881BEA002750D1 /* Servicios.swift in Sources */,

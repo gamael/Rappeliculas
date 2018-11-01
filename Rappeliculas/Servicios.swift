@@ -8,31 +8,44 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class Servicios {
     
-    func getPopularMovies()  {
+    func getPopularMovies(completion: @escaping ([Pelicula]) -> Void )  {
         let parametros: Parameters = [
             "api_key" : Registro.conexionIMDB.apiKey,
             "language" : Registro.configuración.idiomaPorDefecto,
             "page" : "1"
         ]
-//        let parameters: Parameters = ["foo": "bar"]
         Alamofire.request("\(Registro.conexionIMDB.URLservicio)movie/top_rated", parameters: parametros).responseJSON { response in
-            debugPrint(response)
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
-            }
             
             switch response.result {
             case .success:
-                print("Validation Successful")
+                do {
+                    let json = try JSON(data: response.data!)
+                    let peliculasResultado: [Pelicula] = try [Pelicula].decode(from: json["results"].rawData())
+                    completion(peliculasResultado)
+                    
+//                    completion(info, nil)
+                }catch {
+                    print("El servicio falló")
+                }
+                
             case .failure(let error):
                 print(error)
             }
         }
     }
     
+    func savePupularMovies(_ peliculas: [Pelicula], dataController dc: DataController, completion: @escaping () -> () ) -> Void {
+        for peli in peliculas {
+            let peliculaCoreData = PeliculaCD(context: dc.viewContext)
+            peliculaCoreData.id = peli.id
+            peliculaCoreData.title = peli.title
+        }
+        try? dc.viewContext.save()
+        completion()
+    }
     
 }
