@@ -6,39 +6,38 @@
 //  Copyright © 2017 Udacity. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 class DataController {
-    
-    let persistentContainer:NSPersistentContainer
-    
-    var viewContext:NSManagedObjectContext {
+    let persistentContainer: NSPersistentContainer
+
+    var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-    
-    let backgroundContext:NSManagedObjectContext!
-    
-    init(modelName:String) {
+
+    let backgroundContext: NSManagedObjectContext!
+
+    init(modelName: String) {
         persistentContainer = NSPersistentContainer(name: modelName)
-        
+
         backgroundContext = persistentContainer.newBackgroundContext()
     }
-    
+
     func configureContexts() {
         viewContext.automaticallyMergesChangesFromParent = true
         backgroundContext.automaticallyMergesChangesFromParent = true
-        
+
         backgroundContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         viewContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
     }
-    
+
     func load(completion: (() -> Void)? = nil) {
-        persistentContainer.loadPersistentStores { storeDescription, error in
+        persistentContainer.loadPersistentStores { _, error in
             guard error == nil else {
                 fatalError(error!.localizedDescription)
             }
-            //self.autoSaveViewContext()
+            // self.autoSaveViewContext()
             self.configureContexts()
             completion?()
         }
@@ -46,7 +45,8 @@ class DataController {
 }
 
 // MARK: - Autosaving
-//extension DataController {
+
+// extension DataController {
 //    func autoSaveViewContext(interval:TimeInterval = 30) {
 //        print("autosaving")
 //
@@ -63,4 +63,4 @@ class DataController {
 //            self.autoSaveViewContext(interval: interval)
 //        }
 //    }
-//}
+// }
