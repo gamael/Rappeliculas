@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let tabBarController = window?.rootViewController as! UITabBarController
         let popularTableViewController = tabBarController.viewControllers?.first as! PopularTVC
+        let testvc = tabBarController.viewControllers![1] as! testViewController
+        testvc.dataController = dataController
         popularTableViewController.dataController = dataController
         return true
     }
