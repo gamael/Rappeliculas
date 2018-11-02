@@ -17,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         dataController.load()
 
-        let tabBarController = window?.rootViewController as! UITabBarController
+        let tabBarController = window?.rootViewController as! TabBarController
         let popularTableViewController = tabBarController.viewControllers?.first as! PopularTVC
         let testvc = tabBarController.viewControllers![1] as! testViewController
+        tabBarController.dataController = dataController
         testvc.dataController = dataController
         popularTableViewController.dataController = dataController
         return true

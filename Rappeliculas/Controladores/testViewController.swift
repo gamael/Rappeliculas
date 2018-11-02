@@ -41,7 +41,7 @@ class testViewController: UIViewController {
             let card = CardHighlight(frame: CGRect(x: 10, y: 30, width: 200 , height: 240))
             
             card.backgroundColor = UIColor(red: 0, green: 94/255, blue: 112/255, alpha: 1)
-            card.icon = UIImage(named: "flappy")
+            card.icon = UIImage(named: "ICtmdb")
             card.title = "Welcome \nto \nCards !"
             card.itemTitle = "Flappy Bird"
             card.itemSubtitle = "Flap That !"
@@ -49,8 +49,8 @@ class testViewController: UIViewController {
             
             card.hasParallax = true
             card.translatesAutoresizingMaskIntoConstraints = false
-//            let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
-//            card.shouldPresent(cardContentVC, from: self, fullscreen: false)
+            let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
+            card.shouldPresent(cardContentVC, from: self, fullscreen: false)
             
             stack.addArrangedSubview(card)
             NSLayoutConstraint.activate([

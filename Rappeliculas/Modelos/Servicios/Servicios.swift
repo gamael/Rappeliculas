@@ -9,6 +9,7 @@
 import Alamofire
 import Foundation
 import SwiftyJSON
+import CoreData
 
 class Servicios {
     func getPopularMovies(completion: @escaping ([Pelicula]) -> Void) {
@@ -55,4 +56,26 @@ class Servicios {
         try? dc.viewContext.save()
         completion()
     }
+    
+//    fileprivate func getPeliculas(dataController dc: DataController) -> [Pel] {
+//        let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
+//        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+//        fetchRequest.sortDescriptors = [sortDescriptor]
+//
+//        if let resultado = try? dataController.viewContext.fetch(fetchRequest) {
+//            peliculas = resultado
+//        }
+//    }
+    
+    func getCantidadPeliculas(dataController dc: DataController) -> Bool {
+        let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
+        fetchRequest.sortDescriptors = []
+        
+        if (try? dc.viewContext.fetch(fetchRequest)) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

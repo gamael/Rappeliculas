@@ -90,12 +90,12 @@
         <!--Detalle PeliculaVC-->
         <scene sceneID="Nfg-3R-sAI">
             <objects>
-                <viewController id="DLS-uo-VkG" customClass="DetallePeliculaVC" customModule="Rappeliculas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardContent" id="DLS-uo-VkG" customClass="DetallePeliculaVC" customModule="Rappeliculas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ytZ-KJ-5vO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3I-jK-XL8">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3I-jK-XL8">
                                 <rect key="frame" x="138" y="518" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <state key="normal" title="Cerrar"/>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Le9-cE-fRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1262" y="1682"/>
+            <point key="canvasLocation" x="544" y="1598"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QfH-8n-l9H">
@@ -186,9 +186,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="DLS-uo-VkG" kind="show" identifier="verDetalle" trigger="accessoryAction" id="V0K-e0-jO8"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
