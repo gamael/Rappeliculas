@@ -18,11 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dataController.load()
 
         let tabBarController = window?.rootViewController as! TabBarController
-        let popularTableViewController = tabBarController.viewControllers?.first as! PopularTVC
-        let testvc = tabBarController.viewControllers![1] as! testViewController
+        
+        let popularViewController = tabBarController.viewControllers?.first as! PopularVC
+        //let testvc = tabBarController.viewControllers![1] as! testViewController
         tabBarController.dataController = dataController
-        testvc.dataController = dataController
-        popularTableViewController.dataController = dataController
+        //testvc.dataController = dataController
+        popularViewController.dataController = dataController
         return true
     }
 

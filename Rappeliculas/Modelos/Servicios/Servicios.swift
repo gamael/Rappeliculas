@@ -72,17 +72,16 @@ class Servicios {
         fetchRequest.sortDescriptors = []
         
         if let resultado = fetchPopularMovies(dataController: dc), resultado.count > 0  {
-            print("exite")
             return true
         } else {
-            print("no xite")
             return false
         }
     }
     
     func fetchPopularMovies(dataController dc: DataController) -> [PeliculaCD]? {
         let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
-        fetchRequest.sortDescriptors = []
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let resultado = try? dc.viewContext.fetch(fetchRequest) {
             return resultado

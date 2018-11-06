@@ -10,9 +10,9 @@ import UIKit
 
 class DetallePeliculaVC: UIViewController {
     
-    var titulo = ""
-    var fecha = ""
-    var resumen = ""
+    var titulo = "Titulo"
+    var fecha = "Fecha"
+    var resumen = "Resumen"
     
     
     @IBOutlet var tituloLabel: UILabel!

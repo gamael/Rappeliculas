@@ -48,13 +48,13 @@ class TabBarController: UITabBarController {
         revealingSplashView.startAnimation()
         
         if servicios.existenPeliculas(dataController: dataController) {
-            let vc = self.childViewControllers.first as! PopularTVC
+            let vc = self.childViewControllers.first as! PopularVC
             vc.cargarPeliculas()
             revealingSplashView.heartAttack = true
         } else {
             servicios.getPopularMovies(completion: {popularMovies in
                 self.servicios.savePupularMovies(popularMovies, dataController: self.dataController, completion: {
-                    let vc = self.childViewControllers.first as! PopularTVC
+                    let vc = self.childViewControllers.first as! PopularVC
                     vc.cargarPeliculas()
                     DispatchQueue.main.async {
                         revealingSplashView.heartAttack = true

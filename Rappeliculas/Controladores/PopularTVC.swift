@@ -20,24 +20,7 @@ class PopularTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print(self.dataController.persistentContainer.persistentStoreDescriptions)
-        
-//        if peliculas.count == 0 {
-//            servicios.getPopularMovies { resultado in
-//                self.servicios.savePupularMovies(resultado, dataController: self.dataController, completion: {
-//                    print("se supone grabado")
-//                    print(self.dataController.persistentContainer.persistentStoreDescriptions)
-//
-//                })
-//            }
-//        }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     
