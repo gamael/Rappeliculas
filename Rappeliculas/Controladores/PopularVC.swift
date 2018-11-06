@@ -34,10 +34,10 @@ class PopularVC: UIViewController {
         if let resultado = servicios.fetchPopularMovies(dataController: dataController) {
             peliculas = resultado
         }
-        pintarcosas()
+        pintarCartas()
     }
     
-    private func pintarcosas() -> Void {
+    private func pintarCartas() -> Void {
         print(peliculas.count)
         for peli in peliculas {
             let card = CardHighlight(frame: CGRect(x: 10, y: 30, width: 200 , height: 240))
@@ -70,23 +70,6 @@ class PopularVC: UIViewController {
         }
         
     }
-    
-
-
-    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "verDetalle" {
-//            let vc = segue.destination as! DetallePeliculaVC
-//            let indiceSeleccionado = tableView.indexPathForSelectedRow?.row
-//            vc.titulo = peliculas[indiceSeleccionado!].title!
-//            vc.fecha = peliculas[indiceSeleccionado!].release_date!
-//            vc.resumen = peliculas[indiceSeleccionado!].overview!
-//        }
-//
-//    }
- 
-    
-    
     
     
 }
