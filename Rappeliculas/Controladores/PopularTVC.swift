@@ -6,7 +6,7 @@
 //  Copyright © 2018 Alejandro Agudelo. All rights reserved.
 //
 
-import CoreData
+//import CoreData
 import UIKit
 import RevealingSplashView
 
@@ -21,8 +21,7 @@ class PopularTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("hijo didload")
-        
+        print(self.dataController.persistentContainer.persistentStoreDescriptions)
         
 //        if peliculas.count == 0 {
 //            servicios.getPopularMovies { resultado in
@@ -41,12 +40,12 @@ class PopularTVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        print("hijo viewWillDisappear")
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("hijo viewWillAppear")
+    func cargarPeliculas() {
+        if let resultado = servicios.fetchPopularMovies(dataController: dataController) {
+            peliculas = resultado
+        }
+        tableView.reloadData()
     }
     
     

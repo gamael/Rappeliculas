@@ -67,14 +67,27 @@ class Servicios {
 //        }
 //    }
     
-    func getCantidadPeliculas(dataController dc: DataController) -> Bool {
+    func existenPeliculas(dataController dc: DataController) -> Bool {
         let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
         fetchRequest.sortDescriptors = []
         
-        if (try? dc.viewContext.fetch(fetchRequest)) != nil {
+        if let resultado = fetchPopularMovies(dataController: dc), resultado.count > 0  {
+            print("exite")
             return true
         } else {
+            print("no xite")
             return false
+        }
+    }
+    
+    func fetchPopularMovies(dataController dc: DataController) -> [PeliculaCD]? {
+        let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
+        fetchRequest.sortDescriptors = []
+        
+        if let resultado = try? dc.viewContext.fetch(fetchRequest) {
+            return resultado
+        } else {
+            return nil
         }
     }
     

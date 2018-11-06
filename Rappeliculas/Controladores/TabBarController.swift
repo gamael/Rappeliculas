@@ -13,7 +13,6 @@ import UIKit
 class TabBarController: UITabBarController {
     
     var servicios = Servicios()
-    
     var dataController: DataController!
     
     
@@ -48,8 +47,21 @@ class TabBarController: UITabBarController {
         // Starts animation
         revealingSplashView.startAnimation()
         
-        if servicios.getCantidadPeliculas(dataController: dataController) {
+        if servicios.existenPeliculas(dataController: dataController) {
+            let vc = self.childViewControllers.first as! PopularTVC
+            vc.cargarPeliculas()
             revealingSplashView.heartAttack = true
+        } else {
+            servicios.getPopularMovies(completion: {popularMovies in
+                self.servicios.savePupularMovies(popularMovies, dataController: self.dataController, completion: {
+                    let vc = self.childViewControllers.first as! PopularTVC
+                    vc.cargarPeliculas()
+                    DispatchQueue.main.async {
+                        revealingSplashView.heartAttack = true
+                    }
+                    })
+                
+            })
         }
         
     }
