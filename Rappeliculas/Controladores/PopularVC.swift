@@ -44,14 +44,18 @@ class PopularVC: UIViewController {
             
             card.backgroundColor = UIColor(red: 0, green: 94/255, blue: 112/255, alpha: 1)
             card.icon = UIImage(named: "ICtmdb")
-            card.title = "Welcome \nto \nCards !"
-            card.itemTitle = "Flappy Bird"
-            card.itemSubtitle = "Flap That !"
+            card.title = peli.title ?? "Sin titulo"
+            card.itemTitle = peli.original_title ?? ""
+            card.itemSubtitle = String(peli.release_date!.prefix(4))
             card.textColor = UIColor.white
+            
             
             card.hasParallax = true
             card.translatesAutoresizingMaskIntoConstraints = false
-            let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
+            let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent") as! DetallePeliculaVC
+            cardContentVC.titulo = peli.title ?? "Sin titulo"
+            cardContentVC.fecha = peli.release_date ?? "Sin Fecha"
+            cardContentVC.resumen = peli.overview ?? "Sin resumen"
             card.shouldPresent(cardContentVC, from: self, fullscreen: false)
             DispatchQueue.main.async {
                 self.stackView.addArrangedSubview(card)

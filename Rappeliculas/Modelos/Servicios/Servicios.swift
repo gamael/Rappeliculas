@@ -80,7 +80,7 @@ class Servicios {
     
     func fetchPopularMovies(dataController dc: DataController) -> [PeliculaCD]? {
         let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "vote_average", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let resultado = try? dc.viewContext.fetch(fetchRequest) {
