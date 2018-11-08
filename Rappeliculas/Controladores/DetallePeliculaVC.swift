@@ -10,9 +10,9 @@ import UIKit
 
 class DetallePeliculaVC: UIViewController {
     
-    var titulo = ""
-    var fecha = ""
-    var resumen = ""
+    var titulo = "Titulo"
+    var fecha = "Fecha"
+    var resumen = "Resumen"
     
     
     @IBOutlet var tituloLabel: UILabel!
@@ -23,8 +23,8 @@ class DetallePeliculaVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tituloLabel.text = titulo
-        fechaLabel.text = fecha
-        resumenTextView.text = resumen + resumen
+        fechaLabel.text = "Fecha: " + fecha
+        resumenTextView.text = resumen
         // Do any additional setup after loading the view.
     }
 
@@ -33,20 +33,6 @@ class DetallePeliculaVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cerrarPresionado() {
-        self.dismiss(animated: true)
-    }
-    
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -12,7 +12,11 @@ struct Registro {
     private init() {}
     struct conexionIMDB {
         static let URLservicio = "https://api.themoviedb.org/3/"
+        static let URLimagenes = "http://image.tmdb.org/t/p/"
+        static let URLimagenessegura = "https://image.tmdb.org/t/p/"
         static let apiKey = "6f76b5b149d80e160c9cff7e4093856e"
+        static let tamañoPoster = "w342/"
+        static let tamañoBackdrop = "w300/"
     }
 
     struct configuración {
