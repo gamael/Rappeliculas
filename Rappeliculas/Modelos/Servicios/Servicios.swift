@@ -35,17 +35,37 @@ class Servicios {
             }
         }
     }
+    
+    func getImagen(url: String, completion: @escaping (Data) -> Void) {
+        Alamofire.download(url).responseData { response in
+            if let data = response.result.value {
+                print("Me ejecuté")
+                completion(data)
+                
+            }
+            
+        }
+    }
+    
 
     func savePupularMovies(_ peliculas: [Pelicula], dataController dc: DataController, completion: @escaping () -> Void) {
         for peli in peliculas {
             let peliculaCoreData = PeliculaCD(context: dc.viewContext)
-            peliculaCoreData.poster_path = peli.poster_path
+            if let path = peli.poster_path {
+                getImagen(url: "\(Registro.conexionIMDB.URLimagenessegura + Registro.conexionIMDB.tamañoPoster + path)") { dataImagen in
+                    peliculaCoreData.imagenPoster = dataImagen
+                }
+            }
+            
+            
+//            peliculaCoreData.poster_path = peli.poster_path
+//            peliculaCoreData.imagenPoster = getImagen(url: "\(Registro.conexionIMDB.URLimagenes + Registro.conexionIMDB.tamañoPoster + peli.poster_path)")
             peliculaCoreData.adult = peli.adult
             peliculaCoreData.overview = peli.overview
             peliculaCoreData.release_date = peli.release_date
             peliculaCoreData.original_title = peli.original_title
             peliculaCoreData.original_language = peli.original_language
-            peliculaCoreData.backdrop_path = peli.backdrop_path
+            //peliculaCoreData.backdrop_path = peli.backdrop_path
             peliculaCoreData.popularity = peli.popularity
             peliculaCoreData.vote_count = peli.vote_count
             peliculaCoreData.video = peli.video
@@ -57,15 +77,6 @@ class Servicios {
         completion()
     }
     
-//    fileprivate func getPeliculas(dataController dc: DataController) -> [Pel] {
-//        let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()
-//        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//
-//        if let resultado = try? dataController.viewContext.fetch(fetchRequest) {
-//            peliculas = resultado
-//        }
-//    }
     
     func existenPeliculas(dataController dc: DataController) -> Bool {
         let fetchRequest: NSFetchRequest<PeliculaCD> = PeliculaCD.fetchRequest()

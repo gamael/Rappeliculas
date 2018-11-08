@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKO-rQ-xlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="888"/>
+            <point key="canvasLocation" x="1054" y="887"/>
         </scene>
         <!--PopularVC-->
         <scene sceneID="n6S-Zq-kUU">
@@ -143,6 +143,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="bIo-UP-mkB" kind="relationship" relationship="viewControllers" id="keM-cm-eZn"/>
+                        <segue destination="JjM-2a-7oZ" kind="relationship" relationship="viewControllers" id="QcH-xX-h3z"/>
                         <segue destination="s6x-oH-D77" kind="relationship" relationship="viewControllers" id="X6Q-kk-2lE"/>
                         <segue destination="NWK-wa-qYs" kind="relationship" relationship="viewControllers" id="LA2-39-UBU"/>
                     </connections>
@@ -150,6 +151,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffL-u0-F98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-73" y="-194"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WBt-eS-tlX">
+            <objects>
+                <viewController id="JjM-2a-7oZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hU4-8d-3cL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZYf-Oi-quQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="S5s-48-DyC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBG-nq-ZEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="763"/>
         </scene>
     </scenes>
 </document>
